@@ -20,14 +20,38 @@
 - 可在本地运行的交互式Web看板
 
 ## 项目结构
-eeconomic-data-platform/├── main.py # Streamlit 看板入口文件├── README.md # 项目说明文档├── requirements.txt # 依赖库清单├── .gitignore # Git 忽略配置文件├── src/│ ├── init.py # Python 包标识文件│ ├── data_fetcher.py # 数据采集模块│ └── data_processor.py # 数据清洗与处理模块└── data/ # 数据存储目录└── economic_data.csv # 生成的宏观经济数据文件
-
+```
+economic-data-platform/
+├── main.py                 # Streamlit 看板入口文件
+├── README.md               # 项目说明文档
+├── requirements.txt        # 依赖库清单
+├── .gitignore              # Git 忽略配置文件
+├── src/
+│   ├── __init__.py         # Python 包标识文件
+│   ├── data_fetcher.py     # 数据采集模块
+│   └── data_processor.py  # 数据清洗与处理模块
+└── data/                   # 数据存储目录
+    └── economic_data.csv   # 生成的宏观经济数据文件
+```
 
 ## 本地运行指南
-1.  安装项目依赖
-    ```bash
-    pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
-2.  生成模拟宏观经济数据
-    python src/data_fetcher.py
-3.  启动交互式看板
-   streamlit run main.py
+
+### 1. 环境准备
+项目基于 Python 开发，推荐使用 Python 3.8 及以上版本运行。
+### 2. 安装依赖
+在项目根目录下运行以下命令，一键安装所有依赖库：
+```bash
+# 方式1：使用默认PyPI源
+pip install -r requirements.txt
+
+# 方式2：使用清华镜像源（推荐，速度更快）
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+### 3. 生成数据
+运行数据采集脚本，生成模拟宏观经济数据：
+```bash
+python src/data_fetcher.py
+```
+### 4. 启动交互式看板
+```bash
+streamlit run main.py
