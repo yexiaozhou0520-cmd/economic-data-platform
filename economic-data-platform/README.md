@@ -34,7 +34,7 @@ economic-data-platform/
     └── economic_data.csv   # 生成的宏观经济数据文件
 ```
 ## 效果预览
-![项目效果预览](https://github.com/yexiaozhou0520-cmd/economic-data-platform/blob/main/assets/preview.png?raw=true)
+![项目效果预览](./assets/preview.png)
 
 ## 本地运行指南
 
