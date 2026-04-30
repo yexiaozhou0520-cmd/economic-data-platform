@@ -37,11 +37,18 @@
 - `README.md`：项目说明文档
 - ---
 
-## 本地运行指南
+##  本地运行指南
 ### 1. 安装依赖
-'''bash
 pip install -r requirements.txt
-'''
+
+### 2. 启动看板
+streamlit run main.py
+
+### 3. 启动自动化调度（可选）
+python auto_update.py
+
+---
+
 
 ## 云端部署（上线公网访问）
 1. 登录 [share.streamlit.io](https://share.streamlit.io)
