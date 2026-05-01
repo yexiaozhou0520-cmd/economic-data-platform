@@ -23,8 +23,29 @@
 - 核心指标实时显示（最新值、同比增速、3月均线、风险状态）
 - 双图表联动更新
 - 原始数据明细展示
-
 ---
+
+## 看板功能截图
+
+### 1. 数据集概览
+<p align="center">
+  <img src="Dataset%20Overview.PNG" alt="Dataset Overview" width="700">
+</p>
+展示 GDP、CPI、失业率、政策利率、汇率等核心宏观经济指标的原始数据，支持排序与快速数据探索。
+
+### 2. 时间序列趋势分析
+<p align="center">
+  <img src="cpi-joy.png" alt="CPI YoY Trend" width="700">
+</p>
+交互式绘制经济指标随时间的变化趋势，以 CPI 同比为例，直观呈现指标波动特征、周期性变化与关键拐点。
+
+### 3. 指标相关性热力图
+<p align="center">
+  <img src="Indicator%20Correlation%20Matrix.png" alt="Indicator Correlation Matrix" width="700">
+</p>
+通过热力图量化展示各经济指标间的皮尔逊相关系数，直观呈现变量间的线性关联强度，为宏观经济联动分析提供数据支撑。
+---
+
 
 ## 项目文件结构
 - `main.py`：主程序，交互式数据看板
@@ -49,8 +70,8 @@ python auto_update.py
 
 ---
 
-
-## 云端部署（上线公网访问）
+## 云端部署说明
+由于 Streamlit Community Cloud 账号临时限流，本项目目前采用本地运行方式验证，完整部署流程如下：
 1. 登录 [share.streamlit.io](https://share.streamlit.io)
 2. 绑定本 GitHub 仓库
 3. 选择 `main.py` 作为入口文件
